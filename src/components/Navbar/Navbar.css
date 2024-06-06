@@ -1,0 +1,73 @@
+.navbar {
+  padding-block: 1.8rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.navbar_content {
+  display: flex;
+  width: 100%;
+}
+.brand_and_toggler {
+  width: 100%;
+}
+.navbar-brand {
+  width: 90px;
+}
+.navbar-brand span {
+  margin-left: 2rem;
+}
+.navbar_toggler_btn {
+  transition: var(--transition);
+  z-index: 11;
+}
+.navbar-collapse {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--black-color);
+  z-index: 10;
+  height: 100%;
+  width: 280px;
+  display: flex;
+  padding: 10rem 3rem 0 3rem;
+  transition: var(--transition);
+  transform: translateX(100%);
+}
+.show-navbar-collapse {
+  transform: translateX(0);
+}
+.nav-item {
+  margin-bottom: 1.4rem;
+}
+.nav-link {
+  transition: var(--transition);
+}
+.nav-item:where(:hover, :focus-visible) .nav-link {
+  color: var(--purple-color);
+}
+@media only screen and (min-width: 992px) {
+  .navbar-collapse {
+    position: relative;
+    height: auto;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
+    transform: translateX(0);
+    justify-content: flex-end;
+  }
+  .navbar_toggler_btn {
+    display: none;
+  }
+  .navbar-nav {
+    display: flex;
+  }
+  .nav-item {
+    margin-bottom: 0;
+    margin-left: 2.8rem;
+  }
+  .nav-link {
+    color: var(--black-color);
+    font-size: 1.7rem;
+    font-weight: 500 !important;
+    opacity: 0.8;
+  }
+}

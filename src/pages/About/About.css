@@ -1,0 +1,28 @@
+.about {
+  padding-block: 3rem;
+}
+.about_content {
+  gap: 4rem;
+}
+.about-title {
+  margin-block: 1rem;
+}
+.about_img img {
+  max-width: 520px;
+}
+.about_text p {
+  margin-block: 1.8rem;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 800px) {
+  .about_content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-title {
+    margin-top: 0;
+  }
+  .about_img img {
+    margin-left: 0;
+  }
+}
